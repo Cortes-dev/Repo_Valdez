@@ -49,3 +49,104 @@ li:hover > a{
     letter-spacing: 0.3;
     transition: all 0.3s ease;
 }
+
+/* !SECTION "container_description" */
+.container_description{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.content_description {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.content_description:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -1rem;
+    top: 10%;
+    bottom: 10%;
+    width: 1px;
+    background: linear-gradient(to bottom, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.3) 20%, 
+        rgba(255, 255, 255, 0.8) 50%, 
+        rgba(255, 255, 255, 0.3) 80%, 
+        transparent 100%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Estilos para los títulos y párrafos */
+.content_description h2 {
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.content_description p {
+    color: #ccc;
+    line-height: 1.6;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+/* Estilos para mejorar las animaciones */
+.content_description {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.content_description.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animaciones para la navegación */
+#link_nav {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#link_nav.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animación para el título principal */
+h1 {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+h1.animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Efecto hover mejorado para los elementos de contenido */
+.content_description:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de brillo en las líneas cuando se animan */
+.content_description:not(:last-child)::after {
+    transition: all 0.3s ease;
+}
+
+.content_description.animate:not(:last-child)::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+
+
+

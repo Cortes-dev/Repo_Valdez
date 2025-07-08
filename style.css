@@ -7,6 +7,48 @@ body{
     box-sizing: border-box;
 }
 
-h1{
+/* h1{
     text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+} */
+
+ul,li,a{
+    list-style: none;
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 4px 2px;
+}
+
+ul{
+    display: flex;
+    gap: 1rem;
+    letter-spacing: 0.3;
+    background-color: #000916;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    transform: translateY(0);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+li:hover > a{
+    transform: translateY(-4px); 
+    color: blue;
+    letter-spacing: 0.3;
+    transition: all 0.3s ease;
 }
